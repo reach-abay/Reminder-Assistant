@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loadreminders">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Reminders"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addcard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#F8ECECEC"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/remtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/barback"
+                android:ems="10"
+                android:hint="Write reminder"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#ACACAC"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/addbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button"
+                android:elevation="5dp"
+                android:fontFamily="@font/montserrat"
+                android:text="ADD"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/addremfloatbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:text="Add Reminder"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".95"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/reminderlinearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="20dp"
+            android:orientation="vertical" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
